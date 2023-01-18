@@ -7,15 +7,17 @@ using System.Linq;
 class Program
 {
 
+    public static List<IPAddress> devices = new List<IPAddress>();
+
+
     static void Main()
     {
-
         string myIP = GetLocalIPAddress();
         string[] ipPart = myIP.Split(".");
 
         //  var host = Dns.GetHostEntry(Dns.GetHostName());
         //  var localIP = host.AddressList[0];
-        var devices = new List<IPAddress>();
+
 
         for (int i = 1; i < 255; i++)
         {
@@ -25,9 +27,9 @@ class Program
 
             try
             {
-                if (ForcePingTimeoutWithThreads(IPAddress.Parse(fullIp), 50) != null)
+                if (ForcePingTimeoutWithThreads(IPAddress.Parse(fullIp), 25) != null)  // Adjust timeout if not all devices are found
                 {
-                    Console.WriteLine("found: " + fullIp + ": "); //+ GetHostName(fullIp)
+                    Console.WriteLine("found: " + fullIp + ": "); //+ GetHostName(fullIp)                    
                     devices.Add(IPAddress.Parse(fullIp));
                 }
             }
@@ -37,12 +39,16 @@ class Program
                 Console.WriteLine(ex);
             }
         }
+
         foreach (var device in devices)
         {
             try
             {
-                var hostname = Dns.GetHostEntry(device).HostName;
-                Console.WriteLine($"{device} ({hostname})");
+                IPHostEntry hostInfo = System.Net.Dns.GetHostEntry(device.ToString());
+                string hostName = hostInfo.HostName;
+
+                // var hostname = GetHostName(device.ToString());   // Super slow
+                Console.WriteLine($"{device} ({hostName})");
             }
             catch (SocketException)
             {
@@ -87,8 +93,8 @@ class Program
         catch (SocketException ex)
         {
             Console.WriteLine(ex);
+            return "Hostname not found";
         }
-
         return null;
     }
 
@@ -99,7 +105,6 @@ class Program
 
         return value.Substring(0, Math.Min(value.Length, maxLength));
     }
-
 
     public static string GetLocalIPAddress()
     {
@@ -113,8 +118,6 @@ class Program
         }
         throw new Exception("No network adapters with an IPv4 address found");
     }
-
-
 
     // Test only
     public static void GetSubnetMask()
@@ -130,6 +133,5 @@ class Program
             }
         }
     }
-
 
 }

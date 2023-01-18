@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\chsch\\Documents\\C#Projects\\getIP\\getIP.csproj",
+      "projectUniqueName": "C:\\Users\\chsch\\Documents\\C#Projects\\NetworkDeviceFinder\\getIP.csproj",
       "projectName": "getIP",
-      "projectPath": "C:\\Users\\chsch\\Documents\\C#Projects\\getIP\\getIP.csproj",
+      "projectPath": "C:\\Users\\chsch\\Documents\\C#Projects\\NetworkDeviceFinder\\getIP.csproj",
       "packagesPath": "C:\\Users\\chsch\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\chsch\\Documents\\C#Projects\\getIP\\obj\\",
+      "outputPath": "C:\\Users\\chsch\\Documents\\C#Projects\\NetworkDeviceFinder\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\chsch\\AppData\\Roaming\\NuGet\\NuGet.Config"
