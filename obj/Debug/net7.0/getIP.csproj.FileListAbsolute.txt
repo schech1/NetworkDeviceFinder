@@ -1,0 +1,15 @@
+/Users/monika/getIP/bin/Debug/net7.0/getIP
+/Users/monika/getIP/bin/Debug/net7.0/getIP.deps.json
+/Users/monika/getIP/bin/Debug/net7.0/getIP.runtimeconfig.json
+/Users/monika/getIP/bin/Debug/net7.0/getIP.dll
+/Users/monika/getIP/bin/Debug/net7.0/getIP.pdb
+/Users/monika/getIP/obj/Debug/net7.0/getIP.csproj.AssemblyReference.cache
+/Users/monika/getIP/obj/Debug/net7.0/getIP.GeneratedMSBuildEditorConfig.editorconfig
+/Users/monika/getIP/obj/Debug/net7.0/getIP.AssemblyInfoInputs.cache
+/Users/monika/getIP/obj/Debug/net7.0/getIP.AssemblyInfo.cs
+/Users/monika/getIP/obj/Debug/net7.0/getIP.csproj.CoreCompileInputs.cache
+/Users/monika/getIP/obj/Debug/net7.0/getIP.dll
+/Users/monika/getIP/obj/Debug/net7.0/refint/getIP.dll
+/Users/monika/getIP/obj/Debug/net7.0/getIP.pdb
+/Users/monika/getIP/obj/Debug/net7.0/getIP.genruntimeconfig.cache
+/Users/monika/getIP/obj/Debug/net7.0/ref/getIP.dll
